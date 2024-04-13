@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour
     private void WanderAround()
     {
         var targetDirection = target - transform.position;
-        Debug.Log(targetDirection.magnitude);
         if (targetDirection.magnitude > 0.1f)
         {
             characterController.Move(targetDirection.normalized * moveSpeed * Time.deltaTime);
